@@ -1,0 +1,137 @@
+#shorten {
+    position: relative;
+    top: -4.5rem;
+    z-index: 5;
+    
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    padding: 3rem;
+    border-radius: 10px;
+    background: var(--violet) url('../images/bg-shorten-desktop.svg');
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.input-field {
+    width: 100%;
+}
+.input .input-field input[type="text"] {
+    width: 100%;
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input .input-field input[type="text"]::placeholder {
+    color: var(--grayish-violet);
+    font-family: 'Poppins', sans-serif;
+}
+
+.input button {
+    padding: 1rem 1.5rem;
+    background-color: var(--cyan);
+    color: white;
+    white-space: nowrap;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-weight: var(--weight-lg);
+    cursor: pointer;
+    transition: var(--normal);
+}
+
+.input button:hover { opacity: .7; }
+
+.result {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    color: var(--dark-violet);
+    font-size: var(--text);
+    font-weight: var(--weight-sm);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.short-link {
+    color: var(--cyan);
+}
+
+.copy {
+    width: 100px;
+    padding-block: .6rem;
+    border-radius: 5px;
+    background-color: var(--cyan);
+    color: white;
+    font-weight: var(--weight-lg);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: var(--normal);
+}
+.copy:hover { opacity: .7; }
+.result hr { display: none; }
+
+.err {
+    position: absolute;
+    margin-top: .5rem;
+    color: var(--red);
+    font-size: .9rem;
+}
+
+.Copied {
+    background-color: var(--violet) !important;
+}
+.none {
+    display: none;
+}
+@media (max-width: 830px) {
+    #shorten,
+    .input,
+    .result,
+    .link {
+        flex-direction: column;
+    }
+    .shorten-button,
+    .copy {
+        width: 100%;
+    }
+    .link {
+        position: relative;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 1rem;
+    }
+    .result hr {
+        display: block;
+        width: 100%;
+    }
+    .input { padding: 2rem; }
+}
+
+@media (max-width: 500px) {
+    .input { 
+        background: var(--violet) url('../images/bg-shorten-desktop.svg');
+        background-size: cover;
+    }
+}

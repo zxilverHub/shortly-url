@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+:root {
+    --cyan: #2acfcf;
+    --violet: #3b3054;
+
+    --red: #f46262;
+
+    --gray: #bfbfbf;
+    --grayish-violet: #9e9aa7;
+    --dark-blue: hsl(255, 11%, 22%);
+    --dark-violet:  hsl(260, 8%, 14%);
+
+    --text: 1.125rem;
+
+    --weight-sm: 500;
+    --weight-lg: 700;
+
+    --normal: all .3s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--weight-sm);
+}
+
+#root {
+    width: 100%;
+}
+
+.title {
+    font-weight: var(--weight-lg);
+    color: var(--dark-violet);
+    line-height: 1.2;
+}
+
+.sub {
+    font-weight: var(--weight-sm);
+    color: var(--grayish-violet);
+    font-size: var(--text);
+    line-height: 1.7;
+}
+
+.cta {
+    padding: .7rem 2rem;
+    margin-block: .5rem;
+    background-color: var(--cyan);
+    color: white;
+    border-radius: 25px;
+    transition: var(--normal);
+}
+
+.cta:hover {  opacity: .7;}
+
+.contents {
+    width: 100%;
+    background-color: var(--gray);
+    padding-inline: 10%;
+}
+
+@media (max-width: 500px) {
+    .contents {
+        padding-inline: 5%;
+    }
+}

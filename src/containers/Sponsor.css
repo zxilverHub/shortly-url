@@ -1,0 +1,27 @@
+#sponsor {
+    position: relative;
+
+    width: 100%;
+    background: var(--violet) url('../images/bg-boost-desktop.svg');
+    background-size: cover;
+    padding: 3rem 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+#sponsor h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+    #sponsor {
+        background: var(--violet) url('../images/bg-boost-mobile.svg');
+        background-size: cover;
+    }
+}
